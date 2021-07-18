@@ -1,0 +1,390 @@
+@import "_mixin.scss";
+@import "_font.scss";
+@import "_header.scss";
+@import "_footer.scss";
+@import "letsGo.scss";
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    @include container
+}
+
+.calculate__inner {
+    margin: 120px 0;
+    padding: 25px;
+}
+
+.calculate__title {
+    color: #3B405F;
+    @include bold;
+    font-size: 40px;
+    line-height: 50px;
+    margin-bottom: 40px;
+}
+
+.calculate__content {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.calcualte__collage-calc {
+    width: 558px;
+    margin-bottom: 32px;
+    
+.form__select {
+    width:364px;
+    .options-container {
+        width:275px!important;
+        &.active {
+            top:300px !important;
+        }
+    }
+}
+}
+.collage-cal__range {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+}
+
+.range__label {
+    width: 100%;
+    @include regular;
+    font-size: 12px;
+    line-height: 15%;
+    color:rgba(90, 90, 90, 1);
+    margin-bottom: 12px;
+}
+
+.show__value {
+    position: relative;
+    width:100%;
+    height: 55px;
+    @include bold;
+    font-size: 12px;
+    line-height: 15px;
+    color: rgba(90, 90, 90, 1);
+    span {
+        position: absolute;
+        background: #f5f5f5;
+        height: 40px;
+        width: 40px;
+        padding-top: 12px;
+        color:#111;
+        text-align: center;
+        border-radius: 50%;
+        left:50%;
+        transform:translateX(-50%) scale(0);
+        transform-origin: bottom;
+        transition: transform 300ms ease-in-out;
+        z-index: 2;
+    }
+}
+
+.show__value span.active {
+    transform:translateX(-50%) scale(1);
+}
+
+#range {
+    -webkit-appearance: none;
+    width:100%;
+    height: 1px;
+    background: rgba(59, 64, 95, 1);
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    margin-bottom: 12px;
+
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 20px;
+        height: 20px;
+        background: #256AE5;
+        border:5px solid  rgb(169, 140, 248);
+        border-radius: 50px;
+        cursor:pointer
+    }
+
+    &::-moz-range-thumb {
+        -webkit-appearance: none;
+        width: 8px;
+        height: 8px;
+        background: #256AE5;
+        border:5px solid  rgb(169, 140, 248);
+        border-radius: 50px;
+        cursor:pointer
+    }    
+  
+}
+
+.ranges {
+    margin-top: 10px;
+    position: relative;
+    @include bold;
+    font-size: 12px;
+    line-height: 15px;
+    color: rgba(90, 90, 90, 1);
+    div {
+        position: absolute;
+        top:-52px;
+        &:nth-child(2) {
+            right:0;
+        }
+    }
+}
+
+.collage-cal__range-check {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.checkbox__container {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    @include regular;
+    line-height: 32px;
+    color: rgba(112, 112, 112, 1);
+}
+
+.checkmark {
+    display: flex;
+    margin-right:13px;
+    width:18px;
+    height:18px;
+    border:2px solid rgba(112, 112, 112, 1);
+    border-radius: 3px;
+    position: relative;
+    transition: background-color 0.4s;
+    cursor: pointer;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        height: 12px;
+        border-right: 2px solid #fff; 
+        border-bottom: 2px solid #fff; 
+        top:40%;
+        left:50%;
+        transform:translate(-50%, -50%) rotateZ(40deg);
+        opacity:0;
+        transition: all 0.4s;
+    }
+}
+
+.score__label {
+    margin-bottom: 24px !important;
+}
+
+#select-check:checked ~ .checkmark {
+    background-color: #08bb68;
+
+    &::after {
+        opacity:1;
+        transform:translate(-50%, -50%) rotateZ(40deg) scale(1);
+
+    }
+}
+
+#select-check:checked ~ .checkmark {
+    background-color: #08bb68;
+    &::after {
+        opacity:1;
+        transform:translate(-50%, -50%) rotateZ(40deg) scale(1);
+
+    }
+}
+
+#range-check:checked ~ .checkmark {
+    background-color: #08bb68;
+
+    &::after {
+        opacity:1;
+        transform:translate(-50%, -50%) rotateZ(40deg) scale(1);
+
+    }
+}
+
+#range-check:checked ~ .checkmark {
+    background-color: #08bb68;
+    &::after {
+        opacity:1;
+        transform:translate(-50%, -50%) rotateZ(40deg) scale(1);
+
+    }
+}
+
+
+
+.collage-cal__input {
+    display: flex;
+    flex-direction: column;
+    width: 267px;
+    margin-bottom: 32px;
+
+    label {
+        @include regular;
+        font-size: 12px;
+        line-height: 15px;
+        color:rgba(90, 90, 90, 1);
+        margin-bottom: 12px;
+    }
+
+    input {
+        padding: 12px 16px 12px;
+        @include regular;
+        color:rgba(90, 90, 90, 1);
+        box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 50px;    
+        border:none;
+        -moz-appearance:textfield; /* Firefox */
+        margin-bottom: 12px;
+    }
+
+    // Disable arrows
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+    }
+}
+
+
+.calculate-collage__choose {
+    width:558px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 38px 0;
+
+    
+.form__select {
+    width:364px;
+    .options-container {
+        width:275px!important;
+    }
+}
+
+    &-img {
+        margin-bottom: 32px;
+    }
+
+    &-title {
+        @include bold;
+        font-size: 24px;
+        line-height: 30px;
+        color: rgba(59, 64, 95, 1);
+        margin-bottom: 16px;
+    }
+
+}
+
+
+.collage-cal__btn, .collage-cal__apply-btn {
+    color: #fff;
+    @include regular;
+    padding: 16px 32px;
+    border-radius: 31px;
+    text-align: center;
+    background: transparent linear-gradient(90deg, #6840d5 0%, #256ae5 100%) 0% 0%
+      no-repeat padding-box;
+    border:none;
+    cursor: pointer;
+}
+
+
+@media(max-width:1000px) {
+    .calculate__content {
+        flex-direction: column;
+        margin:0 auto;
+    }
+}
+
+@media(max-width:613px) {
+    .calculate-collage__choose,.calcualte__collage-calc {
+        width:450px;
+        margin: 15px auto;
+    }
+
+    .calculate__title {
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
+
+@media(max-width: 505px) {
+    .checkbox__container{
+        font-size: 12px;
+    }
+    .collage-cal__select {
+        .form__select  {
+            position: relative; 
+            align-items: flex-start;
+            .options-container.active {
+                position: absolute;
+                top: 30px !important;
+            }
+        }
+    }
+    .calculate-collage__choose-title {
+        font-size: 18px;
+    }
+
+    .calculate-collage__choose {
+        width:350px;
+    }
+    .calculate-collage__choose-img {
+      img {
+        width:200px;
+        height: 120px;
+      }
+    }
+    .calculate-collage__choose-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form__select {
+        width:250px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        .options-container {
+           position: absolute;
+           top:0;
+        }
+        
+    }
+    .collage-cal__range {
+        width:250px;
+    }
+    .calcualte__collage-calc {
+        width:320px;
+    }
+
+    .calculate__title {
+        font-size: 18px;
+        line-height: 32px;
+    } 
+
+    .selected {
+        width:235px !important;
+    }
+}

@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+button,
+input {
+  outline: none;
+}
+
+$transtiton: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+@mixin container {
+  position: relative;
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 1140px;
+  max-width: 100%;
+}
+
+// MIXINS
+
+@mixin important-text($color, $size) {
+  color: $color;
+  font-size: $size;
+  font-weight: bold;
+  border: 1px solid rgb(38, 38, 41);
+}
+
+@mixin flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@mixin centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+//  Start
+
+@mixin box($width, $height) {
+  width: $width;
+  height: $height;
+  border-radius: 4px;
+}
+
+@mixin cover-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+//  Font
+
+@mixin regular {
+  font: normal 16px/20px "Muli";
+}
+
+@mixin bold {
+  font: normal 16px/20px "Muli-Bold";
+}
+
+@mixin font-size($font-size, $letter-spacing: normal) {
+  font: 400 $font-size "Muli";
+  letter-spacing: $letter-spacing;
+}
+
+@mixin a-button($base, $hover) {
+  color: $base;
+  @include regular;
+  padding: 16px 32px;
+  border-radius: 31px;
+  text-align: center;
+  background: transparent linear-gradient(90deg, #6840d5 0%, #256ae5 100%) 0% 0%
+    no-repeat padding-box;
+
+  &:hover {
+    color: $hover;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 12px 24px;
+  }
+}
+
+@import "_grid.scss";

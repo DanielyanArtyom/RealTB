@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/calculateCollage.css">
+    <title>Calculate Collage</title>
+</head>
+
+<body>
+    <div class="header">
+        <!-- HEAD -->
+        <div class="head_inner">
+            <a class="logo" href="index.html">
+                <img src="img/logo.svg" alt="Logo" />
+            </a>
+            <ul class="links">
+                <li><a href="index.html#howItWorks">How it works</a></li>
+                <li><a href="index.html#why-real">Why RealTB</a></li>
+                <li><a href="index.html#ourFeatures">Our Features</a></li>
+                <li><a href="">Pricing</a></li>
+                <li><a href="calculateCollage.html" class="choosen">College Simulator</a></li>
+            </ul>
+            <div class="menu">
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </div>
+
+    <section class="calculate">
+        <div class="container">
+            <div class="calculate__inner">
+                <h2 class="calculate__title"> Calculate Your Collage Options</h2>
+                <div class="calculate__content">
+                    <form action="" class="calcualte__collage-calc">
+                        <div class="collage-cal__range">
+                            <label for="range" class="range__label">Your SAT Score</label>
+                            <div class="show__value">
+                                <span id="current-value">0</span>
+                            </div>
+                            <input type="range" id="range" class="range__line" min="0" max="400" value="0" step="1" />
+                            <div class="ranges">
+                                <div>0</div>
+                                <div>400</div>
+                            </div>
+                        </div>
+                        <!-- Range checbkox -->
+                        <div class="collage-cal__range-check">
+                            <label for="range-check" class="checkbox__container">
+                                <input type="checkbox" id="range-check" hidden />
+                                <span class="checkmark"></span>
+                                Check this box if you are not submitting an
+                                SAT score
+                            </label>
+                        </div>
+
+                        <div class="collage-cal__select">
+                            <div class="form__select">
+                                <label class="range__label score__label">Your ACT Score</label>
+                                <div class="options-container">
+                                    <div class="option">
+                                        <input type="radio" class="radio" id="1" name="day" />
+                                        <label for="1">1</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" class="radio" id="2" name="day" />
+                                        <label for="2">2</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" class="radio" id="3" name="day" />
+                                        <label for="3">3</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" class="radio" id="4" name="day" />
+                                        <label for="4">4</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" class="radio" id="5" name="day" />
+                                        <label for="5">5</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" class="radio" id="6" name="day" />
+                                        <label for="6">6</label>
+                                    </div>
+                                </div>
+                                <div class="selected">
+                                    Select Score
+                                </div>
+                            </div>
+
+                            <div class="collage-cal__range-check">
+                                <label for="select-check" class="checkbox__container">
+                                    <input type="checkbox" id="select-check" hidden />
+                                    <span class="checkmark"></span>
+                                    Check this box if you are not submitting an
+                                    ACT score
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="collage-cal__input">
+                            <label>Your GPA</label>
+                            <input type="number" value="" placeholder="0" />
+                            <label>On a 4.0 scale</label>
+                        </div>
+
+                        <button type="submit" class="collage-cal__btn">Calculate</button>
+                    </form>
+
+                    <div class="calculate-collage__choose">
+                        <div class="calculate-collage__choose-img">
+                            <img src="img/calculateBooks.png" alt="">
+                        </div>
+                        <h2 class="calculate-collage__choose-title">Need Chances at a certain college ?</h2>
+
+                        <form action="" class="calculate-collage__choose-form">
+                            <div class="form__select">
+                                <div class="options-container">
+
+                                    <div class="option">
+                                        <input type="radio" class="radio" id="1" name="day" />
+                                        <label for="1">1</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" class="radio" id="2" name="day" />
+                                        <label for="2">2</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" class="radio" id="3" name="day" />
+                                        <label for="3">3</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" class="radio" id="4" name="day" />
+                                        <label for="4">4</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" class="radio" id="5" name="day" />
+                                        <label for="5">5</label>
+                                    </div>
+                                    <div class="option">
+                                        <input type="radio" class="radio" id="6" name="day" />
+                                        <label for="6">6</label>
+                                    </div>
+                                </div>
+                                <div class="selected">
+                                    Select Score
+                                </div>
+                            </div>
+                            <button type="submit" class="collage-cal__apply-btn">Apply</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <p class="footer__rights">© 2021 Legit. All Rights Reserved.</p>
+                <ul class="footer__list">
+                    <li class="footer__element"><a href="index.html" class="footer__element-link">Home</a></li>
+                    <li class="footer__element"><a href="conditionsAndTerms.html" class="footer__element-link">Terms of
+                            Service</a></li>
+                    <li class="footer__element"><a href="privacyPolicy.html" class="footer__element-link">Privacy
+                            Policy</a></li>
+                    <li class="footer__element"><a href="index.html#contactUs" class="footer__element-link">Contact
+                            Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/calculateCollage.js"></script>
+</body>
+
+</html>

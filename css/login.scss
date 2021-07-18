@@ -1,0 +1,130 @@
+@import "_mixin.scss";
+@import "_font.scss";
+@import "_header.scss";
+@import "_footer.scss";
+@import "letsGo.scss";
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.login__inner {
+    display: flex;
+}
+
+.login-img {
+    background: transparent linear-gradient(125deg, #256AE5 0%, #6840D5 100%) 0% 0% no-repeat padding-box;
+    max-width: 100%;
+    width:851px;
+    display: flex;
+    align-items:flex-end;
+}
+
+.login__content {
+    margin: 71px 0 71px 120px;
+    display: flex;
+    flex-direction: column;
+    font-family: "Muli";
+    padding: 0 20px;
+    &-logo {
+        width: 215px;
+        height: 80px;
+        margin-bottom: 48px;
+    }
+
+    &-title {
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 32px;
+        color:#3B405F;
+    }
+
+    &-form {
+        display: flex;
+        flex-direction: column;
+        input {
+            padding: 12px 16px 12px;
+            box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 50px;
+            border:none;
+            width:364px;
+            margin-bottom: 20px;
+        }
+        a{
+            font-size: 12px;
+            line-height: 24px;
+            color:#3B405F;  
+            margin-bottom: 32px;
+
+        }
+    }
+
+    .login__form-btn {
+        color: #fff;
+        @include regular;
+        padding: 16px 32px;
+        border-radius: 31px;
+        text-align: center;
+        background: transparent linear-gradient(90deg, #6840d5 0%, #256ae5 100%) 0% 0%
+          no-repeat padding-box;
+        border:none;
+        width:106px;
+        cursor: pointer;
+    }
+}
+
+// Animations
+
+#Cloud1 {
+    animation: upAnimation 3s linear infinite
+    }
+#Cloud2 {
+    animation: downAnimation 3s linear infinite
+    }
+
+#Cloud3 {
+    animation: upAnimation 3s linear infinite
+    }
+
+#Cloud4 {
+    animation: downAnimation 3s linear infinite
+    }
+#Cloud5 {
+    animation: upAnimation 3s linear infinite
+    }
+#Cloud6 {
+    animation: downAnimation 3s linear infinite
+}
+
+
+@keyframes upAnimation {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(8px);
+    }
+    100% {
+       transform: translateY(0px);
+    }
+}
+@keyframes downAnimation {
+    0% {
+        transform: translateY(8px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    100% {
+       transform: translateY(8px);
+    }
+}
+
+              
+@import "_media";
+
+
+

@@ -1,0 +1,1325 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+input {
+  outline: none;
+}
+
+@font-face {
+  font-family: "Muli-Bold";
+  src: url("font/Muli-Bold/Muli-Bold.eot");
+  src: url("font/Muli-Bold/Muli-Bold.eot") format("embedded-opentype"), url("font/Muli-Bold/Muli-Bold.woff") format("woff"), url("font/Muli-Bold/Muli-Bold.ttf") format("truetype"), url("font/Muli-Bold/Muli-Bold.svg#PFDinTextProMedium") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Muli";
+  src: url("font/Muli/Muli.eot");
+  src: url("font/Muli/Muli.eot") format("embedded-opentype"), url("font/Muli/Muli.woff") format("woff"), url("font/Muli/Muli.ttf") format("truetype"), url("font/Muli/Muli.svg#PFDinTextProMedium") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.header {
+  z-index: 999;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  height: 76px;
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 6px #00000029;
+          box-shadow: 0px 0px 6px #00000029;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header .head_inner {
+  width: 1140px;
+  max-width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 8fr 2fr;
+      grid-template-columns: 2fr 8fr 2fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .head_inner.without {
+  width: 1140px;
+  max-width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 8fr;
+      grid-template-columns: 2fr 8fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .logo {
+  -ms-grid-column-align: start;
+      justify-self: start;
+  width: 137px;
+  height: auto;
+}
+
+.header .links {
+  -ms-grid-column-align: end;
+      justify-self: end;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 32px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-auto-flow: column;
+}
+
+.header .links li a {
+  white-space: nowrap;
+  font: normal 16px/20px "Muli";
+  color: #707070;
+}
+
+.header .links li a:hover {
+  color: #252525;
+}
+
+.header .links li a.choosen {
+  font: normal 16px/20px "Muli-Bold";
+  color: #256AE5;
+}
+
+.header .headlogin {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  color: #fff;
+  font: normal 16px/20px "Muli";
+  padding: 16px 32px;
+  border-radius: 31px;
+  text-align: center;
+  background: transparent -webkit-gradient(linear, left top, right top, from(#6840d5), to(#256ae5)) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(90deg, #6840d5 0%, #256ae5 100%) 0% 0% no-repeat padding-box;
+}
+
+.header .headlogin:hover {
+  color: #fff;
+}
+
+@media (max-width: 764px) {
+  .header .headlogin {
+    padding: 12px 24px;
+  }
+}
+
+.header .menu {
+  display: none;
+}
+
+.header .menu .line {
+  display: block;
+  height: 4px;
+  background: transparent -webkit-gradient(linear, left top, right top, from(#6840d5), to(#256ae5));
+  background: transparent linear-gradient(90deg, #6840d5 0%, #256ae5 100%);
+  -webkit-transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: 0.4s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.header .menu .line:first-child {
+  width: 47px;
+}
+
+.header .menu .line:last-child {
+  width: 32px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-bottom: 5px;
+}
+
+.header .menu.active_menu .line:first-child {
+  width: 38px;
+  -webkit-transform: rotate(45deg) translate(1px, 12px);
+          transform: rotate(45deg) translate(1px, 12px);
+}
+
+.header .menu.active_menu .line:last-child {
+  width: 38px;
+  -webkit-transform: rotate(-45deg) translate(-5px, -10px);
+          transform: rotate(-45deg) translate(-5px, -10px);
+}
+
+@media (max-width: 1160px) {
+  .header {
+    padding: 0 32px;
+  }
+  .header ul {
+    grid-gap: 24px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 0 32px;
+  }
+  .header .head_inner {
+    -ms-grid-columns: 6fr 1fr 1fr;
+        grid-template-columns: 6fr 1fr 1fr;
+  }
+  .header .links {
+    position: absolute;
+    top: -87vh;
+    left: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    grid-auto-flow: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background: #fff;
+    width: 100%;
+    height: 86vh;
+    -webkit-transition: 0.45s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: 0.45s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    opacity: 0;
+  }
+  .header .links li {
+    text-align: center;
+  }
+  .header .links li a {
+    font: normal 24px/36px "Muli";
+  }
+  .header .links li a.choosen {
+    font: normal 16px/20px "Muli-Bold";
+    font-size: 24px;
+    line-height: 36px;
+    color: #256AE5;
+  }
+  .header .links.links_active {
+    z-index: 99;
+    top: 77px;
+    opacity: 1;
+  }
+  .header .menu {
+    justify-self: end;
+    cursor: pointer;
+    width: 47px;
+    height: 30px;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.header .headuserProfile {
+  margin-left: 38px;
+  margin-right: 14px;
+  width: 220px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header .headuserProfile-img {
+  height: 24px;
+  width: 24px;
+  margin-right: 16px;
+}
+
+.header .headuserProfile-user {
+  font: normal 16px/20px "Muli";
+  color: #3b405f;
+}
+
+@media (max-width: 764px) {
+  .header {
+    padding: 0 16px;
+  }
+  .header .head_inner {
+    -ms-grid-columns: 4fr 1fr 1fr;
+        grid-template-columns: 4fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .header .head_inner {
+    -ms-grid-columns: 3fr 1fr 1fr;
+        grid-template-columns: 3fr 1fr 1fr;
+  }
+  .header .logo {
+    width: 100px;
+    height: auto;
+  }
+  .header .logo img {
+    width: 100%;
+  }
+  .header .headuserProfile-user {
+    display: none;
+  }
+  .header .headuserProfile {
+    width: 0;
+  }
+  .header .headuserProfile-img {
+    margin-left: auto;
+    width: 40px !important;
+    height: 40px !important;
+    outline: none;
+  }
+}
+
+.footer {
+  background: #585858;
+  width: 100%;
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 1140px;
+  max-width: 100%;
+}
+
+.footer__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #FBFBFB;
+  padding: 60px 25px 70px;
+  font: normal 16px/20px "Muli";
+}
+
+@media (max-width: 650px) {
+  .footer__inner {
+    font-size: 14px;
+  }
+}
+
+.footer__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 20px;
+}
+
+@media (max-width: 650px) {
+  .footer__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.footer__element + .footer__element {
+  margin-left: 60px;
+}
+
+@media (max-width: 810px) {
+  .footer__element + .footer__element {
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 650px) {
+  .footer__element + .footer__element {
+    margin-left: 0;
+  }
+}
+
+.footer__element-link {
+  color: #FBFBFB;
+}
+
+@media (max-width: 650px) {
+  .footer__element {
+    margin-bottom: 15px;
+  }
+}
+
+main {
+  width: 100%;
+  height: auto;
+  margin-top: 40px;
+}
+
+.prepare {
+  position: relative;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 1140px;
+  max-width: 100%;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 5fr 650px;
+      grid-template-columns: 5fr 650px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-auto-flow: dense;
+  align-items: center;
+  justify-items: center;
+}
+
+@media (max-width: 1024px) {
+  .prepare {
+    -ms-grid-columns: 650px;
+        grid-template-columns: 650px;
+  }
+}
+
+@media (max-width: 640px) {
+  .prepare {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.prepare .prepare-text {
+  height: auto;
+}
+
+.prepare .prepare-text h1 {
+  text-transform: uppercase;
+  font: bold 40px/50px "Muli";
+  color: #3b405f;
+}
+
+@media (max-width: 480px) {
+  .prepare .prepare-text h1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .prepare .prepare-text h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+.prepare .prepare-text p {
+  margin-top: 32px;
+  margin-bottom: 50px;
+  font: normal 16px/30px "Muli";
+  color: #5a5a5a;
+}
+
+.prepare .prepare-text a {
+  color: #fff;
+  font: normal 16px/20px "Muli";
+  padding: 16px 32px;
+  border-radius: 31px;
+  text-align: center;
+  background: transparent -webkit-gradient(linear, left top, right top, from(#6840d5), to(#256ae5)) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(90deg, #6840d5 0%, #256ae5 100%) 0% 0% no-repeat padding-box;
+}
+
+@media (max-width: 1190px) {
+  .prepare .prepare-text {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .prepare .prepare-text {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
+  }
+}
+
+.prepare .prepare-text h1 {
+  font: bold 32px/40px "Muli";
+}
+
+@media (max-width: 480px) {
+  .prepare .prepare-text h1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+.prepare .prepare-text p {
+  max-width: 700px;
+}
+
+.prepare .prepare-image {
+  width: 650px;
+}
+
+.prepare .prepare-image img {
+  width: 650px;
+  height: auto;
+}
+
+@media (max-width: 640px) {
+  .prepare .prepare-image {
+    display: none;
+  }
+}
+
+.prepare .prepare-image .arrows {
+  position: absolute;
+  z-index: 11;
+  width: 200px;
+  height: 200px;
+  bottom: 12px;
+  right: 142px;
+}
+
+.prepare .prepare-image .arrows #big-arrow {
+  position: absolute;
+  left: 47.5%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 22%;
+  width: 10px;
+  height: auto;
+  z-index: 17;
+  -webkit-animation: arrow1 20s linear infinite;
+          animation: arrow1 20s linear infinite;
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+}
+
+@media (max-width: 640px) {
+  .prepare .prepare-image .arrows #big-arrow {
+    top: 33%;
+    width: 6px;
+  }
+}
+
+.prepare .prepare-image .arrows #small-arrow {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: 48%;
+  width: 35px;
+  height: auto;
+  z-index: 17;
+  -webkit-animation: arrow1 40s linear infinite;
+          animation: arrow1 40s linear infinite;
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+
+@media (max-width: 640px) {
+  .prepare .prepare-image .arrows #small-arrow {
+    width: 24px;
+  }
+}
+
+@-webkit-keyframes arrow1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes arrow1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes arrow2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes arrow2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.prepare .prepare-image .arrows #clock-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 12px;
+  height: auto;
+  z-index: 20;
+}
+
+@media (max-width: 1024px) {
+  .prepare .prepare-image .arrows {
+    right: 0;
+    left: 308px;
+  }
+}
+
+@media (max-width: 815px) {
+  .prepare .prepare-image .arrows {
+    right: 0;
+    left: 308px;
+  }
+}
+
+.how-it-works {
+  margin-top: 140px;
+  width: 100%;
+  padding: 40px 0 120px 0;
+  background: #fbfbfb 0% 0% no-repeat padding-box;
+}
+
+.how-it-works h1 {
+  position: relative;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 1140px;
+  max-width: 100%;
+  color: #256ae5;
+  text-transform: capitalize;
+  font: bold 40px/50px "Muli";
+}
+
+@media (max-width: 900px) {
+  .how-it-works h1 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .how-it-works h1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+.how-it-works .how-inner {
+  position: relative;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 1140px;
+  max-width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  justify-items: left;
+}
+
+.how-it-works .how-inner .work-block {
+  position: relative;
+  margin-top: 64px;
+}
+
+.how-it-works .how-inner .work-block h3 {
+  color: #3b405f;
+  font: bold 24px/30px "Muli";
+}
+
+.how-it-works .how-inner .work-block p {
+  width: 270px;
+  max-width: 100%;
+  margin-top: 16px;
+  font: normal 16px/30px "Muli";
+  color: #5a5a5a;
+}
+
+.how-it-works .how-inner .work-block .bot_arr {
+  position: absolute;
+  bottom: -20px;
+  left: 95px;
+  width: 277px;
+}
+
+.how-it-works .how-inner .work-block .up_arr {
+  position: absolute;
+  top: -80px;
+  left: 62px;
+  width: 296px;
+}
+
+@media (max-width: 1124px) {
+  .how-it-works .how-inner .work-block img {
+    display: none;
+  }
+}
+
+@media (max-width: 1224px) {
+  .how-it-works .how-inner .work-block {
+    padding: 0 20px;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .how-it-works .how-inner {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.girl-information {
+  position: relative;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 1140px;
+  max-width: 100%;
+  padding-top: 35px;
+  margin-top: 120px;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 24px;
+  -ms-grid-columns: (minmax(500px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+      grid-template-areas: "price_text price_img";
+}
+
+.girl-information img {
+  width: 560px;
+  max-width: 100%;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: price_img;
+}
+
+.girl-information p {
+  max-width: 700px;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: price_text;
+}
+
+@media (max-width: 550px) {
+  .girl-information p {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
+.girl-information .prepare-text {
+  height: auto;
+}
+
+.girl-information .prepare-text h1 {
+  text-transform: uppercase;
+  font: bold 40px/50px "Muli";
+  color: #3b405f;
+}
+
+@media (max-width: 480px) {
+  .girl-information .prepare-text h1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .girl-information .prepare-text h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+.girl-information .prepare-text p {
+  margin-top: 32px;
+  margin-bottom: 50px;
+  font: normal 16px/30px "Muli";
+  color: #5a5a5a;
+}
+
+.girl-information .prepare-text a {
+  color: #fff;
+  font: normal 16px/20px "Muli";
+  padding: 16px 32px;
+  border-radius: 31px;
+  text-align: center;
+  background: transparent -webkit-gradient(linear, left top, right top, from(#6840d5), to(#256ae5)) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(90deg, #6840d5 0%, #256ae5 100%) 0% 0% no-repeat padding-box;
+}
+
+@media (max-width: 1190px) {
+  .girl-information .prepare-text {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .girl-information {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: " price_img " "price_text";
+  }
+}
+
+.why-real {
+  position: relative;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 1140px;
+  max-width: 100%;
+  margin-top: 120px;
+  padding-top: 35px;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 16px;
+  -ms-grid-columns: (minmax(500px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.why-real svg {
+  width: 560px;
+  max-width: 100%;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.why-real #Cloud2 {
+  position: relative;
+  -webkit-animation: cloud2 3s linear infinite;
+          animation: cloud2 3s linear infinite;
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+}
+
+@-webkit-keyframes cloud2 {
+  0% {
+    -webkit-transform: translate(5px, 10px);
+            transform: translate(5px, 10px);
+  }
+  60% {
+    -webkit-transform: translate(-5px, 12px);
+            transform: translate(-5px, 12px);
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  100% {
+    -webkit-transform: translate(5px, 10px);
+            transform: translate(5px, 10px);
+  }
+}
+
+@keyframes cloud2 {
+  0% {
+    -webkit-transform: translate(5px, 10px);
+            transform: translate(5px, 10px);
+  }
+  60% {
+    -webkit-transform: translate(-5px, 12px);
+            transform: translate(-5px, 12px);
+    -webkit-transform: rotate(-5deg);
+            transform: rotate(-5deg);
+  }
+  100% {
+    -webkit-transform: translate(5px, 10px);
+            transform: translate(5px, 10px);
+  }
+}
+
+.why-real #Cloud1 {
+  -webkit-animation: cloud1 4s linear infinite;
+          animation: cloud1 4s linear infinite;
+}
+
+@-webkit-keyframes cloud1 {
+  0% {
+    -webkit-transform: translate(0px, 10px);
+            transform: translate(0px, 10px);
+  }
+  50% {
+    -webkit-transform: translate(5px, 0px);
+            transform: translate(5px, 0px);
+  }
+  100% {
+    -webkit-transform: translate(0px, 10px);
+            transform: translate(0px, 10px);
+  }
+}
+
+@keyframes cloud1 {
+  0% {
+    -webkit-transform: translate(0px, 10px);
+            transform: translate(0px, 10px);
+  }
+  50% {
+    -webkit-transform: translate(5px, 0px);
+            transform: translate(5px, 0px);
+  }
+  100% {
+    -webkit-transform: translate(0px, 10px);
+            transform: translate(0px, 10px);
+  }
+}
+
+.why-real .prepare-text h1 {
+  color: #3b405f;
+  text-transform: capitalize;
+  font: bold 40px/30px "Muli";
+}
+
+@media (max-width: 480px) {
+  .why-real .prepare-text h1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+.why-real .prepare-text ul {
+  margin-top: 30px;
+}
+
+.why-real .prepare-text ul li {
+  padding-left: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #585858;
+  margin-top: 16px;
+  font: 400 16px/20px "Muli";
+}
+
+.why-real .prepare-text ul li h2 {
+  text-transform: uppercase;
+  font: bold 24px/32px "Muli";
+  color: #3b405f;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 480px) {
+  .why-real .prepare-text ul li h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.why-real .prepare-text ul li p {
+  margin-left: 5px;
+  font-size: 14px;
+  line-height: 20px;
+  max-width: 700px;
+}
+
+@media (max-width: 1180px) {
+  .why-real .prepare-text {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 550px) {
+  .why-real {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.rated {
+  margin-top: 140px;
+  width: 100%;
+  padding: 40px 0 120px 0;
+  background: #fbfbfb 0% 0% no-repeat padding-box;
+}
+
+.rated .rate-inner {
+  position: relative;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 1140px;
+  max-width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(500px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-auto-flow: dense;
+  grid-gap: 35px;
+}
+
+.rated .rate-inner img {
+  width: 560px;
+  max-width: 100%;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.rated .rate-inner .read-inf h2 {
+  color: #3b405f;
+  font: bold 32px/40px "Muli";
+  text-transform: uppercase;
+}
+
+.rated .rate-inner .read-inf p {
+  margin-top: 32px;
+  font: normal 16px/24px "Muli";
+  color: #5a5a5a;
+}
+
+.rated .rate-inner .read-inf form {
+  margin-top: 40px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.rated .rate-inner .read-inf form button,
+.rated .rate-inner .read-inf form input {
+  border: none;
+  outline: none;
+}
+
+.rated .rate-inner .read-inf form input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 350px;
+  max-width: 100%;
+  padding: 12px 16px;
+  font: 400 16px/20px "Muli";
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border-radius: 50px 0px 0px 50px;
+  color: #5a5a5a;
+}
+
+@media (max-width: 480px) {
+  .rated .rate-inner .read-inf form input {
+    width: 250px;
+  }
+}
+
+.rated .rate-inner .read-inf form button {
+  padding: 12px 24px;
+  background: transparent -webkit-gradient(linear, left top, right top, from(#6840d5), to(#256ae5)) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(90deg, #6840d5 0%, #256ae5 100%) 0% 0% no-repeat padding-box;
+  border-radius: 0px 50px 50px 0px;
+  font: 500 16px/20px "Muli";
+  color: #fff;
+  text-transform: uppercase;
+}
+
+@media (max-width: 550px) {
+  .rated .rate-inner .read-inf form input {
+    width: 90%;
+  }
+}
+
+@media (max-width: 420px) {
+  .rated .rate-inner .read-inf form {
+    width: 60%;
+  }
+}
+
+@media (max-width: 1180px) {
+  .rated .rate-inner {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 550px) {
+  .rated .rate-inner {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.you-section {
+  position: relative;
+  margin: 0 auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 1140px;
+  max-width: 100%;
+  margin-top: 125px;
+  padding-top: 35px;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: (minmax(450px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-gap: 100px;
+}
+
+.you-section .prepare-text {
+  height: auto;
+}
+
+.you-section .prepare-text h1 {
+  text-transform: uppercase;
+  font: bold 40px/50px "Muli";
+  color: #3b405f;
+}
+
+@media (max-width: 480px) {
+  .you-section .prepare-text h1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .you-section .prepare-text h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+.you-section .prepare-text p {
+  margin-top: 32px;
+  margin-bottom: 50px;
+  font: normal 16px/30px "Muli";
+  color: #5a5a5a;
+}
+
+.you-section .prepare-text a {
+  color: #fff;
+  font: normal 16px/20px "Muli";
+  padding: 16px 32px;
+  border-radius: 31px;
+  text-align: center;
+  background: transparent -webkit-gradient(linear, left top, right top, from(#6840d5), to(#256ae5)) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(90deg, #6840d5 0%, #256ae5 100%) 0% 0% no-repeat padding-box;
+}
+
+@media (max-width: 1190px) {
+  .you-section .prepare-text {
+    padding: 0 20px;
+  }
+}
+
+.you-section .prepare-text h1 {
+  margin-bottom: 15px;
+}
+
+.you-section .prepare-text h2 {
+  text-transform: uppercase;
+  font: bold 24px/32px "Muli";
+  color: #3b405f;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 480px) {
+  .you-section .prepare-text h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .you-section .prepare-text h3 {
+    font-size: 18px;
+    line-height: 24px;
+    font: normal "Muli";
+  }
+}
+
+.you-section .prepare-text p {
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 20px;
+  max-width: 700px;
+  font: normal "Muli";
+}
+
+.you-section .features__slider {
+  max-width: 600px;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .you-section .features__slider {
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 480px) {
+  .you-section .features__slider {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 1002px) {
+  .you-section {
+    padding: 0 20px;
+    justify-items: center;
+  }
+}
+
+@media (max-width: 550px) {
+  .you-section {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.contact-us {
+  position: relative;
+  margin: 120px auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 550px;
+  max-width: 100%;
+}
+
+.contact-us h2 {
+  color: #373737;
+  text-align: left;
+  font: bold 32px/40px "Muli-Bold";
+  letter-spacing: 0.77px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.contact-us p {
+  font-size: 18px;
+  line-height: 20px;
+  max-width: 700px;
+  color: #585858;
+  font-family: "Muli";
+}
+
+.contact-us #contact-form {
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact-us #contact-form button,
+.contact-us #contact-form input,
+.contact-us #contact-form textarea {
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+.contact-us #contact-form label {
+  color: #585858;
+  font: normal 16px/24px "Muli";
+}
+
+.contact-us #contact-form input {
+  margin: 10px 0 18px 0;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #f5f5f5;
+  border-radius: 10px;
+  padding: 14px 16px;
+  color: #585858;
+  font: normal 16px/25px "Muli";
+}
+
+.contact-us #contact-form textarea {
+  color: #585858;
+  margin-top: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #f5f5f5;
+  border-radius: 10px;
+  font: normal 16px/25px "Muli";
+  padding: 16px 18px;
+  height: 182px;
+}
+
+.contact-us #contact-form button {
+  margin-top: 32px;
+  padding: 16px 0;
+  width: 103px;
+  background: transparent -webkit-gradient(linear, left top, right top, from(#6840d5), to(#256ae5)) 0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(90deg, #6840d5 0%, #256ae5 100%) 0% 0% no-repeat padding-box;
+  border-radius: 31px;
+  font: 500 16px/20px "Muli";
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 620px) {
+  .contact-us {
+    padding: 0 20px;
+  }
+}
+/*# sourceMappingURL=index.css.map */

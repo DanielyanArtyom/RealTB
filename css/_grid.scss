@@ -1,0 +1,30 @@
+$breakpoint-screen: 1024px;
+$breakpoint-tablet: 764px;
+$breakpoint-mobile: 480px;
+
+// Predefined Break-points
+$mediaMaxWidth: 1260px;
+$mediaBp1Width: 960px;
+$mediaMinWidth: 480px;
+
+// @media (max-width: $name) {
+// }
+
+@mixin grid-1($first, $second) {
+  display: grid;
+  grid-template-columns: $first $second;
+  align-items: center;
+  grid-auto-flow: dense;
+}
+
+// @mixin grid-media($first, $second) {
+//   @media (max-width: 1024px) {
+//     grid-template-columns: $first $second;
+//   }
+// }
+
+@mixin grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-auto-flow: dense;
+}

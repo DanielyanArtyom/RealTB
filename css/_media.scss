@@ -1,0 +1,210 @@
+
+// Lets Go pages media quears
+
+@media (max-width:1138px) {
+    .letsgo__inner {
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px;
+    }
+}
+
+@media(max-width:622px) {
+    .letsgo__inner-text {
+        text-align: center;
+    }
+
+    .letsgo__inner-img {
+        svg {
+            padding:0 25px;
+            width:400px;
+        }
+    }
+    .form__wrapper {
+        justify-content: center;
+        align-items: center;
+        width: 300px !important;
+    }
+
+    .letsgo__inner-form {
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .form__select + .form__select {
+        margin-left:0 !important;
+    }
+
+    .letsgo__inner-signup {
+        align-items: center;
+    }
+}
+
+@media(max-width:528px) {
+    .singup__socials {
+        width: 140px;
+        justify-content: center;
+        align-items: center;
+        &-item--fb {
+             margin-left: 7px;
+        }
+    }
+}
+
+@media(max-width:423px) {
+    .letsgo__inner-img {
+        svg {
+            width:320px;
+        }
+    }
+}
+
+
+//  end of LetsGo page
+
+// Login page media
+
+
+@media(max-width:1450px) {
+    .login-img{
+        width:650px;
+    }
+}
+
+@media(max-width:1248px) {
+    .login__content {
+        margin: 71px 0 71px 50px;
+    }
+}
+
+@media(max-width:961px) {
+    .login__content {
+        margin: 71px 0 71px 30px;
+    }
+}
+
+@media(max-width:867px) {
+    .login-img{
+        display: none;
+    }
+}
+
+@media(max-width:623px) {
+    .login__content {
+        justify-content: center;
+        align-items: center;
+
+        &-logo {
+            margin-left: 80px;
+            margin-bottom: 0;
+        }
+    }
+    
+    .login__content-form {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media(max-width:435px) {
+    
+    .login__content-form {
+       input {
+        width:250px;
+       }
+    }
+}
+
+@media(max-width:365px) {
+    .login__content {
+        width:280px;
+    }
+    .signup__texts{
+      font-size: 14px;
+    }
+    
+}
+
+// end of login page
+
+// Register page medias
+
+@media(max-width:1420px) {
+    .register-img {
+        width: 650px;       
+    }
+}
+
+@media(max-width:1220px) {
+  .register__content {
+  margin: 71px 0 71px 50px;
+  }
+}
+
+@media(max-width:1155px) {
+  .register__content {
+  margin: 71px 0px 71px 30px;
+  }
+}
+
+@media(max-width:850px) {
+  .register-img{
+      display: none;
+  }
+}
+
+@media(max-width:620px) {
+  .register__content {
+      justify-content: center;
+      align-items: center;
+
+      &-logo {
+          margin-left: 80px;
+          margin-bottom: 0;
+      }
+  }
+  
+  .register__content-form {
+      justify-content: center;
+      align-items: center;
+  }
+
+  .register__form-wrapper {
+      justify-content: center;
+      align-items: center;
+  }
+}
+
+@media(max-width:470px) {
+  .register__content {
+      margin-left: -7px;
+      padding: 0 20px;
+      &-logo {
+          margin-left: 80px;
+      }
+  }
+  
+  .register__content-form {
+      justify-content: center;
+      align-items: center;
+  }
+
+  .register__form-wrapper {
+      justify-content: center;
+      align-items: center;
+  }
+}
+
+@media(max-width:390px) {
+  
+  .register__form-wrapper {
+      flex-direction: column;
+  }
+
+  .register__form-input  {
+      width:250px !important;
+  }
+
+}
+
+// end of register page

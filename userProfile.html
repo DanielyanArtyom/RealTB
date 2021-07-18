@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/userProfile.css" />
+
+    <title>User Profile</title>
+</head>
+
+<body>
+    <div class="header">
+        <!-- HEAD -->
+        <div class="head_inner">
+            <a class="logo" href="index.html">
+                <img src="img/logo.svg" alt="Logo" />
+            </a>
+            <ul class="links">
+                <li><a href="index.html#howItWorks">How it works</a></li>
+                <li><a href="index.html#why-real">Why RealTB</a></li>
+                <li><a href="index.html#ourFeatures">Our Features</a></li>
+                <li><a href="">Pricing</a></li>
+                <li><a href="calculateCollage.html" class="choosen">College Simulator</a></li>
+            </ul>
+            <div class="menu">
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </div>
+
+    <section class="userProfile">
+        <div class="container">
+            <div class="userProfile__inner">
+                <h4 class="userProfile__inner-title">User Profile</h4>
+                <div class="userProfile__content">
+                    <form class="userProfile__info">
+                        <div class="userProfile__info-user">
+                            <div class="info__user-img">
+                                <div class="img__container">
+                                    <img id="blah" src="img/user-icon.svg" alt="">
+                                </div>
+                                <div class="fileInput-upload userInputs">
+                                    <input id="imgInp" id="fileInput" class="userInputs" type="file" disabled />
+                                </div>
+                            </div>
+                            <div class="info__user-name">
+                                <input id="info__input-name" class="userInputs " type="text" value="Name " disabled />
+                                <input id="info__input-surname" class="userInputs " type="text" value="Surname"
+                                    disabled />
+                                <p>Username</p>
+                                <p class="info__user-name--date"> Date joined 30/01/2021</p>
+                                <p class="info__user-name--subscribed">Subscribed</p>
+                            </div>
+                            <div class="info__user-btns">
+                                <div class="info__user-edit" id="editBtn">Edit</div>
+                                <button type="submit" class="info__user-save userInputs">Save</button>
+                            </div>
+
+                        </div>
+                        <div class="userProfile__info-bio">
+                            <h5 class="info-bio__title">BIO</h5>
+                            <textarea class="info-bio__text userInputs" disabled
+                                id="user_Bio">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,</textarea>
+                        </div>
+                    </form>
+
+                    <div class="userProfile__form">
+                        <h4 class="userProfile__form-title">Password</h4>
+                        <form class="userProfile__form-inputs">
+                            <input type="password" class="userProfile__input" placeholder="Enter Old Password">
+                            <input type="password" class="userProfile__input" placeholder="Enter New Password">
+                            <input type="password" class="userProfile__input" placeholder="Reenter New Password">
+                            <button class="userProfile__form-btn" type="submit">Change</button>
+                            <button class="userProfile__form-btn userProfile__form-btn--cancel ">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <p class="footer__rights">© 2021 Legit. All Rights Reserved.</p>
+                <ul class="footer__list">
+                    <li class="footer__element"><a href="index.html" class="footer__element-link">Home</a></li>
+                    <li class="footer__element"><a href="conditionsAndTerms.html" class="footer__element-link">Terms of
+                            Service</a></li>
+                    <li class="footer__element"><a href="privacyPolicy.html" class="footer__element-link">Privacy
+                            Policy</a></li>
+                    <li class="footer__element"><a href="index.html#contactUs" class="footer__element-link">Contact
+                            Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/userProfile.js"></script>
+</body>
+
+</html>

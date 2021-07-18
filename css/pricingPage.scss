@@ -1,0 +1,141 @@
+@import "_mixin.scss";
+@import "_font.scss";
+@import "_header.scss";
+@import "_footer.scss";
+
+
+.pricing__inner{
+    padding: 0 25px;
+    margin:50px 0 350px;
+}
+
+.pricing__title {
+    @include bold;
+    font-size: 24px;
+    line-height: 35px;
+    color: #3B405F;
+    margin-bottom: 50px;
+
+    span {
+        color:#256AE5;
+    }
+}
+
+.pricing__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media(max-width:850px) {
+        flex-direction: column;
+    }
+}
+
+.pricing__payment {
+    @media(max-width:850px) {
+        order:2;
+    }
+    
+}
+
+.pricing__img {
+    @media(max-width:850px) {
+        order:1;
+        margin-bottom: 40px;
+        
+    }
+}
+
+.pricing__btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   
+}
+
+.pricing__paypal {
+    .content {
+        display: block;
+
+        padding: 20px 40px;
+        text-align: center;
+        background: transparent linear-gradient(130deg, #256AE5 0%, #4C51DC 52%, #6840D5 100%);
+        box-shadow: 0px 0px 6px #0000001C;
+        border-radius: 10px;
+        @include bold;
+        color:#ffffff;
+        margin-bottom: 70px;
+        cursor: pointer;
+
+        img {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.pricing__payapl--free {
+    .content {
+        display: block;
+        padding: 20px 32px;
+        text-align: center;
+        background: #ffffff;
+        box-shadow: 0px 0px 6px #0000001C;
+        border-radius: 10px;
+        @include bold;
+        cursor: pointer;
+        color:#3B405F;
+
+        img {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.pricing__services {
+    @include regular;
+    font-size:14px ;
+    line-height: 24px;
+    color: #5A5A5A;
+    margin-bottom: 50px;
+    li {
+        margin-bottom: 10px;
+    }
+}
+
+.paymant__btns {
+    display: flex;
+    justify-content: space-around;   
+    margin-bottom: 40px;
+
+}
+
+.paymant {
+    &__back {
+        padding:14px 40px;
+        color:#ffffff;
+        background:#CECECE;
+        border-radius: 31px;
+    }
+
+    &__confirm {
+        padding:14px 40px;
+        border: 1px solid #256AE5;
+        border-radius: 31px;
+        color:#256AE5;
+
+        &:hover {
+            background: transparent linear-gradient(125deg, #256AE5 0%, #6840D5 100%) 0% 0% no-repeat padding-box;
+            color:#ffffff;
+        }
+    }
+}
+
+
+.pricing__img-content {
+    order:1;
+    @media(max-width:1100px) {
+        width: 400px;
+    }
+    @media(max-width:850px) {
+        width: 300px;
+    }
+}

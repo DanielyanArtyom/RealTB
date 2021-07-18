@@ -1,0 +1,211 @@
+@import "_mixin.scss";
+@import "_font.scss";
+@import "_header.scss";
+@import "_footer.scss";
+@import "letsGo.scss";
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.register__inner {
+    display: flex;
+}
+
+.register-img {
+    background: transparent linear-gradient(125deg, #256AE5 0%, #6840D5 100%) 0% 0% no-repeat padding-box;
+    max-width: 100%;
+    width:851px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+#Cloud1 {
+    animation: upAnimation 3s linear infinite
+}
+#Cloud2 {
+    animation: downAnimation 3s linear infinite
+}
+#Cloud3 {
+    animation: upAnimation 3s linear infinite
+}
+#Cloud4 {
+    animation: downAnimation 3s linear infinite
+}
+#Cloud5 {
+    animation: upAnimation 3s linear infinite
+}
+#Cloud6 {
+    animation: downAnimation 3s linear infinite
+}
+
+@keyframes upAnimation {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(8px);
+    }
+    100% {
+       transform: translateY(0px);
+    }
+}
+@keyframes downAnimation {
+    0% {
+        transform: translateY(8px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    100% {
+       transform: translateY(8px);
+    }
+}
+
+.register__content {
+    max-width: 450px;
+    width: 100%;
+    margin: 71px 0 71px 120px;
+    display: flex;
+    flex-direction: column;
+    font-family: "Muli";
+
+    &-logo {
+        width: 215px;
+        height: 80px;
+        margin-bottom: 48px;
+    }
+
+    &-title {
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 32px;
+        color:#3B405F;
+
+    }
+
+    &-form {
+        display: flex;
+        flex-direction: column;
+        input {
+            padding: 12px 16px 12px;
+            box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 50px;
+            border:none;
+            width:364px;
+            margin-bottom: 20px;
+        }
+        
+    }
+}
+
+    .register__form-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 16px;
+        font-size: 12px;
+    }
+    
+    .register__form-select {
+     display:flex;
+     flex-direction:column ;
+     width:112px;
+    
+     & + .register__form-select {
+         margin-left:12px;
+     }
+    
+     .register__options-container {
+        max-height: 0;
+        width:122px;
+        opacity: 0;
+        transition: all 0.5s;
+        border-radius: 8px;
+        overflow: hidden;
+        order: 1;
+        margin-top: 15px;
+        border:1px solid #c0c0c0;
+        background-color: #fff;
+        position: absolute;
+        margin-top: 50px;
+        z-index: 100;
+
+        overflow: scroll;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none;  /* IE 10+ */
+    
+        &::-webkit-scrollbar {
+            width: 0px;
+            background: transparent; /* make scrollbar transparent */
+        }
+        }
+    }
+    
+    .register__select {
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 50px;
+        order: 0;
+        position: relative;
+        margin-bottom: 15px;
+
+    }
+    
+    .register__select::after {
+        content: '';
+        position: absolute;
+        background-image: url('../img/select-arrow.svg');
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 32px;
+        right: -3px;
+        top:11px;
+        transition: all 0.4s;
+    }
+     
+    .register__options-container.active {
+        max-height: 240px;
+        opacity: 1;
+    }
+    
+    .register__option, .register__select {
+        padding: 12px 24px;
+        cursor: pointer;
+    }
+    
+    .register__option:hover {
+        background: #c0c0c0;
+    }
+    
+    label {
+        cursor: pointer;
+    }
+    
+    .register__option  {
+        .radio {
+            display:none;
+        }
+    }
+
+    .register__form-btn {
+        color: #fff;
+        @include regular;
+        padding: 16px 32px;
+        border-radius: 31px;
+        width:127px;
+        text-align: center;
+        background: transparent linear-gradient(90deg, #6840d5 0%, #256ae5 100%) 0% 0%
+          no-repeat padding-box;
+        border:none;
+        cursor: pointer;
+    }
+
+    @import "_media";
+
+

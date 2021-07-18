@@ -1,0 +1,312 @@
+@import "_mixin.scss";
+@import "_font.scss";
+@import "_header.scss";
+@import "_footer.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    @include container
+}
+
+.userProfile {
+    margin: 120px 0 213px;
+    padding: 0 25px;
+}
+
+.userProfile__inner-title {
+    @include bold;
+    font-size: 40px;
+    line-height: 50px;
+    color: rgba(59, 64, 95, 1);
+    margin-bottom: 40px;
+}
+
+.userProfile__content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.userProfile__info {
+    color:rgba(59, 64, 95, 1);
+    padding-right: 12px;
+    margin-bottom: 30px;
+    &-user {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 32px;
+    }
+    &-bio {
+        max-width: 558px;
+    }
+}
+
+
+.info__user-img {
+    text-align: center;
+    position: relative;
+    .fileInput-upload {
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        margin: 0 auto;
+        top:55px;
+        left:50px;
+        border-radius: 14px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+        overflow: hidden;
+        display: none;
+
+        &:before {
+            content: '+';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-size: 20px;
+            line-height: 28px;
+            font-weight: 700;
+            background-color:#fff;
+            color: rgb(125, 59, 187);
+            
+        }
+        input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40px;
+            height: 40px;
+            opacity: 0;
+            z-index:2;
+            cursor: pointer;
+        }
+        &.active {
+            display: block;
+        }
+    }
+   
+    .img__container {
+        border-radius: 500px;
+
+        img{
+            width:80px;
+            height: 80px;
+            border-radius: 500px;
+        }
+
+    }
+}
+
+.info__user-name {
+    @include bold;
+    font-size: 24px;
+    line-height: 30px;
+
+    p {
+        margin-bottom: 12px;
+        padding-left: 10px;
+    }
+
+    &--date {
+        @include regular;
+        padding-left: 10px;
+    }
+
+    &--subscribed {
+        @include regular;
+        color:rgba(227, 1, 1, 1);
+        padding-left: 10px;
+    }
+
+    input {
+        border:none;
+        background: none;
+        @include bold;
+        font-size: 24px;
+        line-height: 30px;
+        width:150px;
+        color:rgba(59, 64, 95, 1);
+        margin-bottom: 12px;
+        margin-right: 15px;
+        height: 35px;
+        padding:10px 10px;
+
+        &.active {
+            border-radius: 4px;
+            box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);;
+        }
+    }
+}
+
+.info__user-edit {
+    padding-left:36px;
+    margin-bottom: 20px;
+    height: 24px;
+    @include regular;
+    line-height: 32px;
+    color:rgba(112, 112, 112, 1);
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    &::before {
+        content: '';
+        background-image: url('../img/edit-pen.svg');
+        background-repeat: no-repeat;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top:5px;
+        left:0;
+    }
+}
+
+.info__user-save {
+    display: none;
+    color: #fff;
+    @include regular;
+    padding: 10px 16px;
+    border-radius: 31px;
+    text-align: center;
+    background: transparent linear-gradient(90deg, #6840d5 0%, #256ae5 100%) 0% 0%
+      no-repeat padding-box;
+    border:none;
+    cursor: pointer;
+
+    &.active{
+        display: block;
+    }
+}
+
+.info__user-img {
+    margin-right:24px;
+}
+
+.info__user-name {
+    margin-right: auto;
+}
+
+.info-bio__title {
+    @include bold;
+    margin-bottom: 16px;
+}
+
+.info-bio__text {
+    display: block;
+    resize: none;
+    @include regular;
+    line-height: 32px;
+    width: 100%;
+    overflow: hidden;
+    color: rgba(112, 112, 112, 1);
+    border: none;
+    background: none;
+    padding: 15px;
+
+}
+
+.info-bio__text.active {
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);;
+}
+
+.userProfile__form {
+    padding-left: 12px;
+    
+    &-title {
+        @include bold;
+        font-size: 24px;
+        line-height: 30px;
+        color: rgba(59, 64, 95, 1);
+        margin-bottom: 24px;
+    }
+
+    &-inputs {
+        @include regular;
+        width: 364px;
+        color: #5A5A5A;
+    }
+
+    &-btn {
+        color: #fff;
+        @include regular;
+        padding: 16px 32px;
+        border-radius: 31px;
+        text-align: center;
+        background: transparent linear-gradient(90deg, #6840d5 0%, #256ae5 100%) 0% 0%
+          no-repeat padding-box;
+        border:none;
+        cursor: pointer;
+        margin-right: 24px;
+
+        &--cancel {
+            background:rgba(206, 206, 206, 1);
+            color:rgba(90, 90, 90, 1);
+        }
+    }
+
+}
+
+.userProfile__input {
+    width: 100%;
+    padding: 12px 16px 12px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    border:none;
+    margin-bottom: 24px;
+}
+
+@media(max-width:996px) {
+    .userProfile__content {
+        justify-content: center;
+        align-items: center;
+    }
+    .userProfile__inner-title {
+        text-align: center;
+    }
+}
+
+@media(max-width: 440px) {
+    .userProfile__info-user {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .info__user-name {
+        margin-left:90px;
+        font-size: 18px;
+        input {
+            font-size: 18px;
+        }
+        
+    }
+    .userProfile__form-inputs {
+        width:250px;
+    }
+
+    .userProfile__form-btn {
+        padding: 12px 24px;
+        margin-right: 12px;
+    }
+    .info__user-img {
+        margin-bottom: 15px;
+    }
+
+    .userProfile__info-bio {
+        padding: 0 20px;
+    }
+
+    .info-bio__text {
+        line-height: 24px;
+        font-size: 14px;
+    }
+}

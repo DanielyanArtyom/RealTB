@@ -1,0 +1,600 @@
+@import "_mixin.scss";
+@import "_font.scss";
+@import "_header.scss";
+@import "_footer.scss";
+
+
+@mixin prep {
+  height: auto;
+  h1 {
+    text-transform: uppercase;
+    font: bold 40px/50px "Muli";
+    color: #3b405f;
+    @media(max-width:480px) {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+  h2 {
+    @media(max-width:480px) {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+  p {
+    margin-top: 32px;
+    margin-bottom: 50px;
+    font: normal 16px/30px "Muli";
+    color: #5a5a5a;
+  }
+  a {
+    color: #fff;
+    font: normal 16px/20px "Muli";
+    padding: 16px 32px;
+    border-radius: 31px;
+    text-align: center;
+    background: transparent linear-gradient(90deg, #6840d5 0%, #256ae5 100%) 0%
+      0% no-repeat padding-box;
+  }
+
+  @media (max-width: 1190px) {
+    padding: 0 20px;
+  }
+}
+
+main {
+  width: 100%;
+  height: auto;
+  margin-top: 40px;
+}
+
+.prepare {
+  @include container;
+  margin: 0 auto;
+  @include grid-1(5fr, 650px);
+  align-items: center;
+  justify-items: center;
+
+  @media (max-width: $breakpoint-screen) {
+    grid-template-columns: 650px;
+  }
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+  }
+
+  .prepare-text {
+    @include prep;
+    @media (max-width: $breakpoint-screen) {
+      grid-column: 1/4;
+    }
+
+    h1{
+      font: bold 32px/40px "Muli";
+      @media(max-width:480px) {
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
+    p {
+      max-width: 700px;
+    }
+  }
+
+  .prepare-image {
+    width: 650px;
+    img {
+      width: 650px;
+      height: auto;
+    }
+
+    @media (max-width: 640px) {
+     display: none;
+    }
+
+    //  ------------- SVG ANIMATIONS
+    .arrows {
+      position: absolute;
+      // background: rgba(0, 0, 0, 0.123);
+      z-index: 11;
+      width: 200px;
+      height: 200px;
+      bottom: 12px;
+      right: 142px;
+
+      #big-arrow {
+        position: absolute;
+        left: 47.5%;
+        transform: translateX(-50%);
+        top: 22%;
+        width: 10px;
+        height: auto;
+        z-index: 17;
+        animation: arrow1 20s linear infinite;
+        transform-origin: 50% 100%;
+        @media (max-width: 640px) {
+          top: 33%;
+          width: 6px
+        }
+      }
+      #small-arrow {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 48%;
+        width: 35px;
+        height: auto;
+        z-index: 17;
+        animation: arrow1 40s linear infinite;
+        transform-origin: 0% 50%;
+
+        @media (max-width: 640px) {
+          width: 24px;
+        }
+        
+      }
+
+      @keyframes arrow1 {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes arrow2 {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      #clock-circle {
+        @include centered;
+        width: 12px;
+        height: auto;
+        z-index: 20;
+      }
+      @media (max-width: 1024px) {
+        right: 0;
+        left: 308px;
+      }
+
+      @media (max-width: 815px) {
+        right: 0;
+        left: 308px;
+      }
+      
+    }
+  }
+}
+
+.how-it-works {
+  margin-top: 140px;
+  width: 100%;
+  padding: 40px 0 120px 0;
+  background: #fbfbfb 0% 0% no-repeat padding-box;
+
+  h1 {
+    @include container;
+    color: #256ae5;
+    text-transform: capitalize;
+    font: bold 40px/50px "Muli";
+    @media (max-width: 900px) {
+      text-align: center;
+    }
+    @media(max-width:480px) {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+
+  .how-inner {
+    @include container;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: left;
+
+    .work-block {
+      position: relative;
+      margin-top: 64px;
+      h3 {
+        color: #3b405f;
+        font: bold 24px/30px "Muli";
+      }
+      p {
+        width: 270px;
+        max-width: 100%;
+        margin-top: 16px;
+        font: normal 16px/30px "Muli";
+        color: #5a5a5a;
+      }
+
+      .bot_arr {
+        position: absolute;
+        bottom: -20px;
+        left: 95px;
+        width: 277px;
+      }
+      .up_arr {
+        position: absolute;
+        top: -80px;
+        left: 62px;
+        width: 296px;
+      }
+
+      @media (max-width: 1124px) {
+        img {
+          display: none;
+        }
+      }
+      @media (max-width: 1224px) {
+        padding: 0 20px;
+        justify-self: center;
+      }
+    }
+  }
+  @media (max-width: 900px) {
+    .how-inner {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.girl-information {
+  @include container;
+  padding-top:35px;
+  margin-top: 120px;
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-areas: "price_text price_img" ;
+ 
+
+  img {
+    width: 560px;
+    max-width: 100%;
+    justify-self: center;
+    grid-area: price_img;
+   
+  }
+  p{
+    max-width: 700px;
+    grid-area: price_text;
+    @media (max-width: 550px) {
+      order:2
+    }
+  }
+
+  .prepare-text {
+    @include prep;
+  }
+  @media (max-width: 1000px) {
+    grid-template-columns: 1fr;
+    grid-template-areas: " price_img " "price_text" ;
+  }
+}
+
+.why-real {
+  @include container;
+  margin-top: 120px;
+  padding-top:35px;
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  align-items: center;
+  svg {
+    width: 560px;
+    max-width: 100%;
+    justify-self: center;
+  }
+
+
+  #Cloud2 {
+    position: relative;
+    animation: cloud2 3s linear infinite;
+    transform-origin: 50% 50%;
+  }
+  @keyframes cloud2 {
+    0% {
+      transform: translate(5px, 10px);
+    }
+    60% {
+      transform: translate(-5px, 12px);
+      transform: rotate(-5deg);
+    }
+    100% {
+      transform: translate(5px, 10px);
+    }
+  }
+
+  #Cloud1 {
+    animation: cloud1 4s linear infinite;
+  }
+
+  @keyframes cloud1 {
+    0% {
+      transform: translate(0px, 10px);
+    }
+    50% {
+      transform: translate(5px, 0px);
+    }
+    100% {
+      transform: translate(0px, 10px);
+    }
+  }
+
+  .prepare-text {
+    h1 {
+      color: #3b405f;
+      text-transform: capitalize;
+      font: bold 40px/30px "Muli";
+      @media(max-width:480px) {
+        font-size: 24px;
+        line-height: 32px;
+      }
+    }
+    ul {
+      margin-top: 30px;
+      li {
+        padding-left: 6px;
+        display: flex;
+        flex-direction: row;
+        color: #585858;
+        margin-top: 16px;
+        font: 400 16px/20px "Muli";
+        h2 {
+          text-transform: uppercase;
+          font: bold 24px/32px "Muli";
+          color: #3b405f;
+          margin-bottom: 8px;
+          @media(max-width:480px) {
+            font-size: 18px;
+            line-height: 24px;
+          }
+        }
+        p {
+          margin-left: 5px;
+          font-size: 14px;
+          line-height: 20px;
+          max-width: 700px;
+
+        }
+      }
+    }
+    @media (max-width: 1180px) {
+      padding: 20px;
+    }
+  }
+  @media (max-width: 550px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.rated {
+  margin-top: 140px;
+  width: 100%;
+  padding: 40px 0 120px 0;
+  background: #fbfbfb 0% 0% no-repeat padding-box;
+
+  .rate-inner {
+    @include container;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-auto-flow: dense;
+    grid-gap:35px;
+
+    img {
+      width: 560px;
+      max-width: 100%;
+      justify-self: end;
+    }
+
+    .read-inf {
+      h2 {
+        color: #3b405f;
+        font: bold 32px/40px "Muli";
+        text-transform: uppercase;
+      }
+      p {
+        margin-top: 32px;
+        font: normal 16px/24px "Muli";
+        color: #5a5a5a;
+      }
+      form {
+        margin-top: 40px;
+        display: inline-flex;
+
+        button,
+        input {
+          border: none;
+          outline: none;
+        }
+        input {
+          box-sizing: border-box;
+          width: 350px;
+          max-width: 100%;
+          padding: 12px 16px;
+          font: 400 16px/20px "Muli";
+          background: #ffffff 0% 0% no-repeat padding-box;
+          border-radius: 50px 0px 0px 50px;
+          color: #5a5a5a;
+          @media(max-width:480px) {
+            width:250px;
+          }
+        }
+        button {
+          padding: 12px 24px;
+          background: transparent
+            linear-gradient(90deg, #6840d5 0%, #256ae5 100%) 0% 0% no-repeat
+            padding-box;
+          border-radius: 0px 50px 50px 0px;
+          font: 500 16px/20px "Muli";
+          color: #fff;
+          text-transform: uppercase;
+        }
+        @media (max-width: 550px) {
+          input {
+            width: 90%;
+          }
+        }
+        @media(max-width:420px) {
+          width:60%;
+        }
+      }
+    }
+    @media (max-width: 1180px) {
+      padding: 0 20px;
+    }
+    @media (max-width: 550px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.you-section {
+  @include container;
+  margin-top: 125px;
+  padding-top:35px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-gap: 100px;
+  .prepare-text {
+    @include prep;
+    h1 {
+      margin-bottom: 15px;
+    
+    }
+    h2 {
+      text-transform: uppercase;
+      font: bold 24px/32px "Muli";
+      color: #3b405f;
+      margin-bottom: 8px;
+      @media(max-width:480px) {
+        font-size: 18px;
+        line-height: 24px;
+      }
+    }
+    h3 {
+      @media(max-width:480px) {
+        font-size: 18px;
+        line-height: 24px;
+        font: normal "Muli"
+
+      }
+    }
+    p {
+      margin:0;
+      margin-bottom: 15px;
+      font-size: 14px;
+      line-height: 20px;
+      max-width: 700px;
+      font: normal "Muli"
+    }
+  }
+  
+  .features__slider {
+    max-width: 600px;
+    width: 100%;
+    @media (max-width: 600px) {
+      max-width: 450px;
+    }
+    @media (max-width: 480px) {
+      max-width: 300px;
+    }
+  } 
+
+  @media (max-width: 1002px) {
+    padding: 0 20px;
+    justify-items: center;
+  }
+  @media (max-width: 550px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact-us {
+  position: relative;
+  margin: 120px auto;
+  box-sizing: border-box;
+  width: 550px;
+  max-width: 100%;
+  
+
+  h2 {
+    color: #373737;
+    text-align: left;
+    font: bold 32px/40px "Muli-Bold";
+    letter-spacing: 0.77px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+  }
+
+  p {
+      font-size: 18px;
+      line-height: 20px;
+      max-width: 700px;
+      color: #585858;
+      font-family: "Muli";
+  }
+
+  #contact-form {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+
+    button,
+    input,
+    textarea {
+      border: none;
+      outline: none;
+      resize: none;
+    }
+
+
+    label {
+      color: #585858;
+      font: normal 16px/24px "Muli";
+    }
+
+    input {
+      margin: 10px 0 18px 0;
+      width: 100%;
+      box-sizing: border-box;
+      background: #f5f5f5;
+      border-radius: 10px;
+      padding: 14px 16px;
+      color: #585858;
+      font: normal 16px/25px "Muli";
+    }
+
+    textarea {
+      color: #585858;
+      margin-top: 10px;
+      box-sizing: border-box;
+      background: #f5f5f5;
+      border-radius: 10px;
+      font: normal 16px/25px "Muli";
+      padding: 16px 18px;
+      height: 182px;
+    }
+
+    button {
+      margin-top: 32px;
+      padding: 16px 0;
+      width: 103px;
+      background: transparent linear-gradient(90deg, #6840d5 0%, #256ae5 100%)
+        0% 0% no-repeat padding-box;
+      border-radius: 31px;
+      font: 500 16px/20px "Muli";
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+
+  @media (max-width: 620px) {
+    padding: 0 20px;
+  }
+}

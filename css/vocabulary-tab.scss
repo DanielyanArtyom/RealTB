@@ -1,0 +1,108 @@
+@import "_mixin.scss";
+@import "_font.scss";
+@import "_header.scss";
+@import "_footer.scss";
+@import "myClassroom.scss";
+
+
+.sidebar__element.active{
+    background-color: #fff;
+    .sidebar__element-link {
+        color:#256AE5;
+        @include regular;
+        font-size: 18px;
+        position: relative;
+            &::before {
+                content:'';
+                position: absolute;
+                top:3px;
+                left: 0;
+                width: 17px;
+                height: 20px;
+                background: url("../img/vocab_blue.svg");
+        }
+        @media(max-width:560px) {
+            font-size: 14px;
+        }
+    }
+}
+
+.dashboard {
+    padding: 33px 50px 70px;
+    &__title {
+        @include bold;
+        font-size: 24px;
+        line-height: 35px;
+        color: #5A5A5A;
+        margin-bottom: 50px;
+    }
+
+    @media(max-width:560px) {
+        padding: 33px 20px 70px;
+
+    }
+}
+
+
+.dashboard__vocabulary {
+    @include regular;
+    font-size: 25px;
+    line-height: 36px;
+    padding: 33px 36px 33px 63px;
+    box-shadow: 0px 0px 6px #00000029;
+    border-radius: 10px;
+    color: #5A5A5A; 
+    margin-bottom: 60px;
+    span {
+        color:#256AE5
+    }
+    @media(max-width:756px) {
+        font-size: 18px;
+        line-height: 24px;
+        padding: 33px 18px 33px 24px;
+
+    }
+
+    @media(max-width:620px) {
+        font-size: 16px;
+        line-height: 18px;
+        padding: 20px 10px 20px 15px;
+    }
+    @media(max-width:430px) {
+        font-size: 14px;
+    }
+}
+
+.dashboard__btns {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @media (max-width: 460px) {
+        flex-direction: column;
+      }
+}
+
+.dashboard__btn {
+    color: #256AE5;
+    @include bold;
+    padding: 16px 32px;
+    border-radius: 31px;
+    text-align: center;
+    border: 1px solid #256AE5;
+
+      &:hover {
+        background: transparent linear-gradient(90deg, #6840d5 0%, #256ae5 100%) 0% 0%
+        no-repeat padding-box;
+        color: #ffffff;
+      }
+
+      @media (max-width: 756px) {
+        padding: 12px 24px;
+        font-size: 14px;
+      }
+
+      @media (max-width: 460px) {
+        margin-bottom: 15px;
+      }
+      
+}

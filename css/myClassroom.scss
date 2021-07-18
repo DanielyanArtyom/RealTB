@@ -1,0 +1,139 @@
+@import "_mixin.scss";
+@import "_font.scss";
+@import "_header.scss";
+@import "_footer.scss";
+
+.myClassroom {
+    display: flex;
+}
+
+.sidebar {
+    background: transparent linear-gradient(165deg, #256AE5 0%, #6741D5 96%, #6741D5 98%, #6840D5 100%) 0% 0% no-repeat padding-box;
+    &__inner {
+        padding-top: 50px;
+        margin-bottom:400px;
+    }
+    
+    &__user {
+        @include bold;
+        font-size: 18px;
+        line-height: 26px;
+        display: flex;
+        color:#fff;
+        align-items: center;
+        margin-bottom: 40px;
+        padding:  0 20px 0 40px;
+
+        img {
+            margin-right:30px;
+        }
+        @media(max-width:560px) {
+            .sidebar__user-name {
+                display: none;
+            }
+        }
+    }
+
+    &__element {
+        margin-bottom: 18px;
+
+        padding:12px 20px 12px 60px;
+        @include regular;
+        font-size: 18px;
+        line-height: 26px;
+        @media(max-width:756px) {
+            padding: 15px 36px 15px 20px;
+        }
+        @media(max-width:560px) {
+            padding: 15px 0 15px 16px;
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        .sidebar__element-link {
+            color: #ffffff;
+            padding-left:48px;
+            &--score {
+                position: relative;
+                &::before {
+                    content:'';
+                    position: absolute;
+                    top:3px;
+                    left: 0;
+                    width: 17px;
+                    height: 20px;
+                    background: url("../img/scoreIcon.svg");
+                }
+            }
+            &--vocab{
+                position: relative;
+                &::before {
+                    content:'';
+                    position: absolute;
+                    top:3px;
+                    left: 0;
+                    width: 21px;
+                    height: 20px;
+                    background: url("../img/vobacIcon.svg");
+                }
+            }
+            &--member {
+                position: relative;
+                &::before {
+                    content:'';
+                    position: absolute;
+                    top:3px;
+                    left: 0;
+                    width: 22px;
+                    height: 20px;
+                    background: url("../img/membershipIcon.svg");
+                }
+            }
+            &--settings {
+                position: relative;
+                &::before {
+                    content:'';
+                    position: absolute;
+                    top:3px;
+                    left: 0;
+                    width: 21px;
+                    height: 20px;
+                    background: url("../img/settings.svg");
+                }
+            }
+            @media(max-width:560px) {
+                padding-left:28px;
+
+            }
+        }
+    }
+}
+
+.sign__out {
+    @include regular;
+    font-size: 18px;
+    color: #ffffff;
+    cursor: pointer;  
+    border: none;
+    background: none;
+    padding-left:48px;
+    margin-bottom: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

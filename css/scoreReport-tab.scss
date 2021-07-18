@@ -1,0 +1,134 @@
+@import "_mixin.scss";
+@import "_font.scss";
+@import "_header.scss";
+@import "_footer.scss";
+@import "myClassroom.scss";
+
+
+
+.sidebar__element.active{
+    background-color: #fff;
+    .sidebar__element-link {
+        color:#256AE5;
+        @include regular;
+        font-size: 18px;
+        position: relative;
+            &::before {
+                content:'';
+                position: absolute;
+                top:3px;
+                left: 0;
+                width: 17px;
+                height: 20px;
+                background: url("../img/score_blue.svg");
+        }
+    }
+}
+
+.dashboard {
+    padding: 33px 50px 70px;
+    max-width: 910px;
+    width: 100%;
+    &__title {
+        @include bold;
+        font-size: 24px;
+        line-height: 35px;
+        color: #5A5A5A;
+        margin-bottom: 50px;
+    }
+
+    @media(max-width:560px) {
+        padding: 33px 20px 70px;
+
+    }
+}
+
+.dashboard__diagram {
+    box-shadow: 0px 0px 6px #0000001F;
+    border-radius: 10px;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 40px;
+}
+
+.dashboard__testContainer {
+    border:1px solid red;
+}
+
+.test {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 0px 6px #0000001F;
+    border-radius: 10px;
+    padding: 25px 45px;
+    @include regular;
+    font-size: 18px;
+    line-height: 26px;
+    color: #C6C6C6;
+    margin-bottom: 25px;
+    
+    @media(max-width:735px) {
+        justify-content: flex-start;
+        flex-direction: column;
+    align-items: flex-start;
+
+    }
+}
+
+.testNumber {
+    color: #256AE5;
+    position: relative;
+    padding-left: 40px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top:0;
+        left: 0;
+        height: 30px;
+        width: 24px;
+        background-image: url('../img/test.svg');
+        background-repeat: no-repeat;
+    }
+    @media(max-width:735px) {
+        margin-bottom: 15px;
+    }
+}
+
+.testDate {
+    position: relative;
+    padding-left: 40px;
+    &::before {
+        content: '';
+        position: absolute;
+        top:3px;
+        left: 0;
+        height: 30px;
+        width: 24px;
+        background-image: url('../img/calendar.svg');
+        background-repeat: no-repeat;
+    }
+    @media(max-width:735px) {
+        margin-bottom: 15px;
+    }
+}
+
+.testResult {
+    position: relative;
+    padding-left: 40px;
+    &::before {
+        content: '';
+        position: absolute;
+        top:3px;
+        left: 0;
+        height: 30px;
+        width: 24px;
+        background-image: url('../img/star.svg');
+        background-repeat: no-repeat;
+    }
+}
+
+
+
+

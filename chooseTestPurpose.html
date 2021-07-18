@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/chooseTestPurpose.css" />
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="header">
+        <!-- HEAD -->
+        <div class="head_inner">
+            <a class="logo" href="index.html">
+                <img src="img/logo.svg" alt="Logo" />
+            </a>
+            <ul class="links">
+                <li><a href="index.html#howItWorks">How it works</a></li>
+                <li><a href="index.html#why-real">Why RealTB</a></li>
+                <li><a href="index.html#ourFeatures">Our Features</a></li>
+                <li><a href="">Pricing</a></li>
+                <li><a href="calculateCollage.html" class="choosen">College Simulator</a></li>
+            </ul>
+            <a href="login.html" class="headlogin">Login</a>
+            <div class="menu">
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </div>
+
+    <section class="chooseTest">
+        <div class="container">
+            <div class="chooseTest__inner">
+                <h2 class="chooseTest__title">Choose Test Purpose</h2>
+                <div class="chooseTest-links">
+                    <div class="chooseTest-link chooseTest-link--full openModal" data-modal-id="2">Full Test</div>
+                    <div class="chooseTest-link chooseTest-link--practice openModal" data-modal-id="1">Practice
+                        Questions</div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+    <!-- modals -->
+    <div class="bg-modal" id="1">
+        <div class="modal">
+            <div class="modal__inner">
+                <div class="modal__close"></div>
+                <h5 class="modal__title">Start Test</h5>
+                <p class="modal__text">After completing a section, you can stop or review.</p>
+                <div class="tabs__container">
+                    <div class="tabs-header" id="tabs">
+                        <div class="tab-header">Reading</div>
+                        <div class="tab-header">Writing</div>
+                        <div class="tab-header">Math</div>
+                    </div>
+                    <a href="testPage.html" class="tab-body__link">Start Test</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modals -->
+    <div class="bg-modal" id="2">
+        <div class="modal">
+            <div class="modal__inner">
+                <div class="modal__close"></div>
+                <h5 class="modal__title">Start Test</h5>
+                <div class="tabs__container">
+                    <p class="modal__text">If you start section, you can not stop it</p>
+                    <a href="testPage.html" class="tab-body__link">Start Test</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <p class="footer__rights">© 2021 Legit. All Rights Reserved.</p>
+                <ul class="footer__list">
+                    <li class="footer__element"><a href="index.html" class="footer__element-link">Home</a></li>
+                    <li class="footer__element"><a href="conditionsAndTerms.html" class="footer__element-link">Terms of
+                            Service</a></li>
+                    <li class="footer__element"><a href="privacyPolicy.html" class="footer__element-link">Privacy
+                            Policy</a></li>
+                    <li class="footer__element"><a href="index.html#contactUs" class="footer__element-link">Contact
+                            Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/chooseTestPurpose.js"></script>
+</body>
+
+</html>
